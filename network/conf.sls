@@ -9,11 +9,5 @@
     - user: root
     - group: root
     - mode: 644
-  service.running:
-    - name: networking.service
-    - enable: True
-    - reload: True
-    - watch:
-      - file: /etc/network/interfaces
 
 {%- endif %}
