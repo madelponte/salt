@@ -10,8 +10,9 @@ source /etc/network/interfaces.d/*
 auto lo
 iface lo inet loopback
 
+
 {%- for interface in interfaces %}
 allow-hotplug {{ interface }}
 iface {{ interface }} inet static
-    address {{ interface:address }}
+    address {{ interface['address'] }}
 {%- endfor %}
