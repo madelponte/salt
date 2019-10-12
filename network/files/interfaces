@@ -1,0 +1,19 @@
+# This file is managed by Salt!
+{%- set interfaces = salt['pillar.get']('network:interfaces')}
+
+
+
+
+source /etc/network/interfaces.d/*
+    
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+{%- for interface in interfaces %}
+allow-hotplug {{ interface }}
+iface {{ interface }} inet static
+    address {{ address }}
+    netmask {{ netmask }}
+    gateway {{ gateway }}
+{%- endfor %}
