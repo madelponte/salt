@@ -1,5 +1,5 @@
 # This file is managed by Salt!
-{%- set interfaces = salt['pillar.get']('network:interfaces')}
+{%- set interfaces = salt['pillar.get']('network:interfaces') %}
 
 
 
