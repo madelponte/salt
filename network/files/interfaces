@@ -13,5 +13,5 @@ iface lo inet loopback
 {%- for interface in interfaces %}
 allow-hotplug {{ interface }}
 iface {{ interface }} inet static
-    address {%- salt['pillar.get']('network:interfaces:{{ interface }}:address) %}
+    address {{ interface:address }}
 {%- endfor %}
