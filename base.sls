@@ -3,6 +3,7 @@ include:
   - sudo
   - repositories
   - nftables
+  - network
 
 install common packages:
   pkg.installed:
