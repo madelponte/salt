@@ -17,7 +17,7 @@ ssh_dir_{{ user }}:
 ssh_keys_{{ user }}:
   file.managed:
     - name: /home/{{ user }}/.ssh/authorized_keys
-    - source: salt://ssh/files/keys/{{ user }}
+    - source: salt://ssh/files/keys/{{ user }}.keys
     - user: {{ user }}
     - group: {{ user }}
     - mode: '0640'
