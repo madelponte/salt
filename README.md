@@ -1,2 +1,3 @@
 # salt
-salt states
+
+Salt states for managing basic configuration of a debian system.
