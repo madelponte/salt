@@ -4,6 +4,7 @@ include:
   - repositories
   - nftables
   - network
+  - resolvconf
 
 install common packages:
   pkg.installed:
