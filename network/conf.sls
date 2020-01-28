@@ -10,4 +10,12 @@
     - group: root
     - mode: 644
 
+/etc/resolv.conf:
+  file.managed:
+    - source: salt://network/files/resolv.conf
+    - template: jinja
+    - user: root
+    - group: root
+    - mode: 644
+
 {%- endif %}
