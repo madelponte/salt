@@ -17,3 +17,4 @@ install common packages:
       - dnsutils
       - ntp
       - curl
+      - iotop
