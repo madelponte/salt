@@ -1,3 +1,8 @@
+#!jinja|yaml
+{%- set settings = salt['pillar.get']('hosting', {}) %}
+{%- if 'lookup' in settings %}
+{%- set lookup = settings['lookup'] %}
+
 apt-transport-https:
   pkg.installed
 
@@ -22,3 +27,5 @@ saltrepo:
     - refresh_db: False
     - watch_in:
       -cmd: apt-get-update
+
+{%- endif %}
