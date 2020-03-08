@@ -5,7 +5,7 @@
 
 /etc/iptables.up.rules:
   file.managed:
-    - source: salt://iptables/files/iptables.conf
+    - source: salt://iptables/files/iptables.up.rules
     - template: jinja
     - user: root
     - group: root
@@ -15,11 +15,12 @@
     - onchanges:
       - file: /etc/iptables.up.rules
 
-/etc/network/if-up.d/iptables:
+Install Config:
   file.managed:
+    - name: /etc/network/if-up.d/iptables
     - source: salt://iptables/files/iptables
-      - user: root
-      - group: root
-      - mode: 755
+    - user: root
+    - group: root
+    - mode: 755
 
 {%- endif %}
