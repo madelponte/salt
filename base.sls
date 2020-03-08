@@ -2,7 +2,7 @@ include:
   - ssh
   - sudo
   - repositories
-  - nftables
+  - firewall
   - network
 
 install common packages:

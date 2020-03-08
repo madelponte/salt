@@ -1,5 +1,5 @@
 #!jinja|yaml
-{%- set settings = salt['pillar.get']('firewall', {}) %}
+{%- set settings = salt['pillar.get']('nftables', {}) %}
 {%- if 'lookup' in settings %}
 {%- set lookup = settings['lookup'] %}
 
