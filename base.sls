@@ -2,8 +2,9 @@ include:
   - ssh
   - sudo
   - repositories
-  - firewall
+  - nftables
   - network
+  - iptables
 
 install common packages:
   pkg.installed:

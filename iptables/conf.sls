@@ -1,25 +1,11 @@
 #!jinja|yaml
-{%- set settings = salt['pillar.get']('nftables', {}) %}
-{%- if 'lookup' in settings %}
-{%- set lookup = settings['lookup'] %}
-
-/etc/nftables.conf:
-  file.managed:
-    - source: salt://firewall/files/nftables.conf
-    - template: jinja
-    - user: root
-    - group: root
-    - mode: 644
-
-
-{%- endif %}
 {%- set settings = salt['pillar.get']('iptables', {}) %}
 {%- if 'lookup' in settings %}
 {%- set lookup = settings['lookup'] %}
 
 /etc/iptables.up.rules:
   file.managed:
-    - source: salt://firewall/files/iptables.conf
+    - source: salt://iptables/files/iptables.conf
     - template: jinja
     - user: root
     - group: root
@@ -31,7 +17,7 @@
 
 /etc/network/if-up.d/iptables:
   file.managed:
-    - source: salt://firewall/files/iptables
+    - source: salt://iptables/files/iptables
       - user: root
       - group: root
       - mode: 755
