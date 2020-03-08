@@ -8,7 +8,7 @@ include:
   - .pkg
   - .conf
 
-{%- else %}
+{%- endif %}
 {%- set settings = salt['pillar.get']('iptables', {}) %}
 {%- if 'lookup' in settings %}
 {%- set lookup = settings['lookup'] %}
@@ -16,5 +16,4 @@ include:
 include:
   - .conf
 
-{%- endif %}
 {%- endif %}

@@ -12,7 +12,7 @@
     - mode: 644
 
 
-{%- else %}
+{%- endif %}
 {%- set settings = salt['pillar.get']('iptables', {}) %}
 {%- if 'lookup' in settings %}
 {%- set lookup = settings['lookup'] %}
@@ -36,5 +36,4 @@
       - group: root
       - mode: 755
 
-{%- endif %}
 {%- endif %}
