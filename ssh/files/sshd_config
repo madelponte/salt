@@ -28,7 +28,7 @@ LoginGraceTime 60
 PermitRootLogin no
 StrictModes yes
 MaxAuthTries 4
-ClientAliveInterval 900
+ClientAliveInterval 0
 ClientAliveCountMax 0
 
 RSAAuthentication yes

@@ -31,8 +31,7 @@
 
 /etc/network/if-up.d/iptables:
   file.managed:
-    - source: salt://nftables/files/iptables.conf
-      - template: jinja
+    - source: salt://nftables/files/iptables
       - user: root
       - group: root
       - mode: 755
