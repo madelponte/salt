@@ -15,7 +15,7 @@
     - onchanges:
       - file: /etc/iptables.up.rules
 
-Install Config:
+startup-script:
   file.managed:
     - name: /etc/network/if-up.d/iptables
     - source: salt://iptables/files/iptables
