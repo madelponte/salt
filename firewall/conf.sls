@@ -5,7 +5,7 @@
 
 /etc/nftables.conf:
   file.managed:
-    - source: salt://nftables/files/nftables.conf
+    - source: salt://firewall/files/nftables.conf
     - template: jinja
     - user: root
     - group: root
@@ -19,7 +19,7 @@
 
 /etc/iptables.up.rules:
   file.managed:
-    - source: salt://nftables/files/iptables.conf
+    - source: salt://firewall/files/iptables.conf
     - template: jinja
     - user: root
     - group: root
@@ -31,7 +31,7 @@
 
 /etc/network/if-up.d/iptables:
   file.managed:
-    - source: salt://nftables/files/iptables
+    - source: salt://firewall/files/iptables
       - user: root
       - group: root
       - mode: 755
