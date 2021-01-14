@@ -19,4 +19,3 @@ install common packages:
       - ntp
       - curl
       - iotop
-      - lzma
