@@ -5,3 +5,6 @@
     - user: root
     - group: root
     - mode: 440
+
+include:
+  - .pkg
