@@ -19,3 +19,4 @@ install common packages:
       - ntp
       - curl
       - iotop
+      - qemu-guest-agent
