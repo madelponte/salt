@@ -5,8 +5,8 @@
 deb http://{{ mirror }}/debian {{ distro }} main contrib non-free
 deb-src http://{{ mirror }}/debian {{ distro }} main contrib non-free
 
-deb http://security.debian.org/ {{ distro }}/updates main contrib non-free
-deb-src http://security.debian.org/ {{ distro }}/updates main contrib non-free
+deb http://security.debian.org/debian-security {{ distro }}-security main contrib non-free
+deb-src http://security.debian.org/debian-security {{ distro }}-security main contrib non-free
 
-deb http://{{ mirror }}/debian {{ distro }}-updates main
-deb-src http://{{ mirror }}/debian {{ distro }}-updates main
+deb http://{{ mirror }}/debian {{ distro }}-updates main contrib non-free
+deb-src http://{{ mirror }}/debian {{ distro }}-updates main contrib non-free
